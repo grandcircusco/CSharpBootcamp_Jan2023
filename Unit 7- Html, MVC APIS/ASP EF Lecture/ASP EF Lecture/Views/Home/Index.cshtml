@@ -1,0 +1,32 @@
+﻿@model List<Post>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- asp-action="AddPost" not a view -->
+<form asp-method="post" asp-action="AddPost">
+    <!-- Each input relates to the Post Model -->
+    <p>What is your name?</p>
+    <input type="text" name="Author" />
+
+    <p>status:</p>
+    <input type="text" name="Content" />
+
+    <!-- Notice no likes or date? controller will handle that-->
+
+    <input type="submit" />
+</form>
+
+
+@{
+    //c#
+    foreach(Post p in Model){
+        <!-- html -->
+        <a class="nav-link text-dark" asp-action="PostDetails" asp-route-id="@p.Id">
+            <div class="card">
+                <p>@p.Author</p>
+                <p>@p.Content</p>
+            </div>
+        </a>
+    }
+}

@@ -1,0 +1,11 @@
+﻿@model Post
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>@Model.Author</h1>
+<p>@Model.Content</p>
+<p>Likes: @Model.Likes <a class="btn btn-primary" asp-action="AddLike" asp-route-id="@Model.Id">Like</a> </p>
+<p>Date posted: @Model.DatePosted</p>
