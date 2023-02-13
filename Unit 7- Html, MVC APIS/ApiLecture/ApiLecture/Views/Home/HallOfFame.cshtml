@@ -1,0 +1,15 @@
+﻿@model HallOfFameResponse
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Hall of fame complete</h1>
+@{
+    foreach(Complete c in Model.complete){
+        <h2>@c.firstName @c.lastName</h2>
+        <p>@c.innovation</p>
+        <p>@c.year</p>
+    }
+}
