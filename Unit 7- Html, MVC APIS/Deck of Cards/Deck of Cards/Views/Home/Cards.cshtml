@@ -1,0 +1,28 @@
+﻿@model DeckModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Your hand:</h1>
+<p>Remaining cards: @Model.Remaining</p>
+
+<form asp-action="Cards" asp-method="post">
+@{
+    int i = 0;
+    foreach(Card c in Model.Cards){
+        string name = $"card{i}";
+        i++;
+        <img src="@c.Image" />
+        <input type="checkbox" value="@c.Image" name="@name"/>
+
+    }
+}
+<br />
+<input type="submit" value="Keep selected cards" />
+</form>
+
+
+<br />
+<a asp-action="Cards" class="btn btn-primary">Draw 5 more</a>
+<a asp-action="Shuffle" class="btn btn-primary">Reshuffle Early</a>
