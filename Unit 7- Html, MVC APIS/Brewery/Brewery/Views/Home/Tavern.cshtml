@@ -1,0 +1,29 @@
+﻿@model List<TavernModel>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<form asp-method="post" asp-action="Tavern">
+    <p>Please enter a city</p>
+    <input type="text" name="city" />
+    <select name="cityState">
+        <option value="state">state</option>
+        <option value="city">city</option>
+    </select>
+    <input type="submit"/>
+</form>
+
+@{
+    if(Model != null){
+        foreach(TavernModel t in Model){
+            <h2>@t.Name</h2>
+            <p>@t.Street</p>
+            <p>@t.State</p>
+            <p>@t.City</p>
+        }
+    }
+}
