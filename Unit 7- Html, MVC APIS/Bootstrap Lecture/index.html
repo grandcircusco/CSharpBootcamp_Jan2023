@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-light sticky-top">
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="navbar-brand" href="#fish"
+            ><img
+              height="30px"
+              src="https://cdn.discordapp.com/attachments/894691496530436140/1075821270517690479/image.png"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="business.html">Link 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link 4</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <button
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              Click me
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Choice 1</a>
+              <a class="dropdown-item" href="#">Choice 2</a>
+              <a class="dropdown-item" href="#">Choice 3</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Bootstrap lecture</h1>
+      <p>This is a project</p>
+      <div class="row">
+        <p class="col-8">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+          consequatur nemo, architecto eveniet reiciendis repellat amet, cumque
+          in quidem deserunt tempore et culpa? Dolores eos veritatis, voluptatem
+          reiciendis quae maiores.
+        </p>
+        <p class="col-4">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus ullam,
+          optio facere nostrum sit dolorum placeat est blanditiis quam. Aperiam
+          nihil eum a? Fuga, ipsum rerum placeat aliquam vitae cum?
+        </p>
+      </div>
+      <div class="row">
+        <p class="col-lg-6 col-sm-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque
+          aut ipsa sed distinctio incidunt, modi commodi vel unde, numquam
+          nesciunt hic recusandae soluta, praesentium enim perferendis dolorum
+          error. Perferendis!
+        </p>
+      </div>
+      <div class="row">
+        <p class="col-4"></p>
+        <p class="col-4 text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          laboriosam alias perspiciatis eveniet animi magnam incidunt at harum
+          illo! Impedit ex animi earum iure quo, similique natus quas ea totam.
+        </p>
+      </div>
+      <!-- Make a new row and get a lorem text on the last third of the row -->
+      <div class="row">
+        <p class="col-4 offset-8">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
+          tempora eos a animi error id facere libero ducimus quidem, illum,
+          perferendis iusto quod quis quisquam beatae cupiditate doloribus, ab
+          nostrum!
+        </p>
+      </div>
+      <div class="row">
+        <img
+          id="fish"
+          class="col-4 img"
+          src="https://media.tenor.com/cJ5qlfWcPx0AAAAC/fish-gun.gif"
+        />
+        <p class="col-8">
+          A fish gets loaded up into a canon and fired at the news anchor
+        </p>
+      </div>
+      <div class="row">
+        <a class="btn col-2 btn-info" href="https://www.google.com">Google</a>
+      </div>
+      <div class="row">
+        <div class="card col-6 p-0">
+          <div class="card-header">Header</div>
+          <div class="card-body">This is a card</div>
+          <div class="card-footer">Footer</div>
+        </div>
+      </div>
+      <div class="row">
+        <button data-bs-toggle="collapse" data-bs-target="#demo">
+          Click me
+        </button>
+
+        <div id="demo" class="collapse">
+          <p>I will be toggled</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="dropdown">
+          <button
+            type="button"
+            class="btn btn-primary dropdown-toggle"
+            data-bs-toggle="dropdown"
+          >
+            Click me
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Choice 1</a>
+            <a class="dropdown-item" href="#">Choice 2</a>
+            <a class="dropdown-item" href="#">Choice 3</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Launch demo modal
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
