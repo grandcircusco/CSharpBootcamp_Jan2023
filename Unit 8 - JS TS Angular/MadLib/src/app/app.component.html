@@ -1,0 +1,41 @@
+<h1>{{ title }}</h1>
+<input type="text" [(ngModel)]="title" />
+
+<!-- Mad libs ex -->
+<p>Noun:</p>
+<input type="text" [(ngModel)]="Noun" />
+<p>Noun:</p>
+<input type="text" [(ngModel)]="Noun2" />
+<p>Adjective:</p>
+<input type="text" [(ngModel)]="Adjective" />
+<p>Food:</p>
+<input type="text" [(ngModel)]="Food" />
+<p>Place:</p>
+<input type="text" [(ngModel)]="Place" />
+
+<!-- Mad lib sentence -->
+<p>I was walking down on the {{Noun}} and turned right past the {{ Noun2 }} when I arrived at the resturant.</p>
+<p>It had a {{ Adjective }} atmosphere, but I ordered a {{Food }} from there. It was terrible.</p>
+<p>Thats what I get for ordering food from {{ Place }}.</p>
+
+
+<h1>FORM EXAMPLE</h1>
+<!-- Form posting example -->
+<p *ngFor="let n of names">{{ n }}</p>
+<input type="text" [(ngModel)]="newName" />
+<button (click)="addName()">Add Name</button>
+
+
+<h1>Form with interfaces</h1>
+<p>Enter product name:</p>
+<input type="text" [(ngModel)]="newProduct.name" />
+<p>Enter product price</p>
+<input type="number" [(ngModel)]="newProduct.price" />
+
+<button (click)="addProduct()">Add product</button>
+
+<div *ngFor="let p of products; index as i">
+    <h2>{{ p.name }}</h2>
+    <p>{{ p.price | currency }}</p>
+    <button (click)="removeProduct(i)">Delete {{ p.name }}</button>
+</div>

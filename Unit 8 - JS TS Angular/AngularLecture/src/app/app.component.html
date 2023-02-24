@@ -1,0 +1,27 @@
+<h1>Welcome to {{ title }}</h1>
+
+<p>My age is: {{ age }}</p>
+
+<!-- *ngIf structual directive -->
+<p *ngIf="isHungry == true">I am hungry</p>
+<!-- if ishungry is false, display i am not hungry -->
+<!-- check: ts file and changing true to false -->
+<p *ngIf="isHungry == false">Not hungry.</p>
+
+<!-- *ngFor structual directive -->
+<p *ngFor="let n of names; index as i">{{ i + 1 }}. {{ n }}</p>
+<p *ngFor="let m of favMovies">{{ m }}</p>
+
+<!-- <h1>{{ techDepartment.name }}</h1>
+<p>Employees: {{ techDepartment.employeeCount }}</p>
+<p *ngIf="techDepartment.hiring == true">Currently hiring</p>
+<p *ngIf="techDepartment.hiring == false">Not hiring</p> -->
+
+<div *ngFor="let d of allDepartments">
+  <!-- { style : condition ? value true : value false } -->
+  <h2 [ngStyle]="{'color': d.hiring == true ? 'green' : 'red' }">{{ d.name }}</h2>
+
+  <p [ngClass]="d.employeeCount >= 10 ? 'bolded' : '' ">Employees: {{ d.employeeCount }}</p>
+  <p *ngIf="d.hiring">Currently Hiring</p>
+  <p *ngIf="!d.hiring">Not hiring</p>
+</div>
