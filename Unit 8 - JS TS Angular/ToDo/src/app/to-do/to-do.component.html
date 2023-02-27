@@ -1,0 +1,21 @@
+<div class="todoContainer">
+<h1>Todo List</h1>
+<p>A place to store your todos</p>
+
+<input placeholder="Filter your todo" class="fullWidth" type="string" [(ngModel)]="filter" />
+<h3 *ngIf="IsCompletedList()">Congrats</h3>
+
+<div *ngFor="let t of getFiltered();index as i">
+    <p>
+        <button class="completeButton" *ngIf="t.completed == false" (click)="CompleteTask(i)">Complete</button>
+         <!-- {{ t.task }}  -->
+         <input [disabled]="t.completed" [ngClass]="t.completed ? 'completed' : ''" type="text" [(ngModel)]="t.task" />
+         <!-- <button >x</button> -->
+         <span (click)="RemoveTask(i)"><i class="fa-solid fa-xmark"></i></span>
+    </p>
+</div>
+
+<p>Enter new task:</p>
+<input placeholder="Add your todo" class="fullWidth" type="text" [(ngModel)]="newTask" />
+<button class="fullWidth" (click)="AddTask()">Add todo</button>
+</div>
