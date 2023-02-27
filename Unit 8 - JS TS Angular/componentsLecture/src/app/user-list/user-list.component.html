@@ -1,0 +1,3 @@
+<app-single-user *ngFor="let u of Users" [DisplayUser]="u"></app-single-user>
+
+<app-registration  (UserCreated)="AddUser($event)"></app-registration>

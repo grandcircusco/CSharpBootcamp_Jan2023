@@ -1,0 +1,11 @@
+<h2>Create a new user</h2>
+<p>Username:</p>
+<input type="text" [(ngModel)]="newUser.Username" />
+
+<p>Password:</p>
+<input type="password" [(ngModel)]="newUser.Password" />
+
+<p>Favorite Drink:</p>
+<input type="text" [(ngModel)]="newUser.FavDrink" />
+
+<button  (click)="CreateUser()">Add User</button>
