@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'componentsLecture';
+
+  Name:string = "";
+
+  changeName(value:string){
+    this.Name = value;
+  }
 }

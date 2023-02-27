@@ -1,2 +1,6 @@
 <app-header></app-header>
 <app-body></app-body>
+
+<h1>{{ Name }}</h1>
+<app-person [name]=" 'Billy' " (selectedName)="changeName($event)"></app-person>
+<app-person (selectedName)="changeName($event)"></app-person>
