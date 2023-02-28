@@ -1,0 +1,2 @@
+<app-single-post (deleted)="OnDelete($event)" *ngFor="let p of posts" [post]="p"></app-single-post>
+<app-post-form (submitted)="AddPost($event)"></app-post-form>
