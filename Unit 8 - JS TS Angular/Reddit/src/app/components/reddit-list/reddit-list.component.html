@@ -1,0 +1,14 @@
+<div (keydown.Enter)="searchSubreddit()">
+  <h1>Reddit</h1>
+  <input type="text" [(ngModel)]="search" />
+  <button (click)="searchSubreddit()">Search subreddit</button>
+  <p>{{ status }}</p>
+
+
+  <app-reddit-single
+    *ngFor="let p of result.data.children"
+    [Post]="p"
+  ></app-reddit-single>
+
+  
+</div>

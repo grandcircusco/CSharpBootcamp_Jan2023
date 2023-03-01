@@ -1,0 +1,8 @@
+<h1>Blog Title: {{ result.title }}</h1>
+<p>Langauge: {{ result.language }}</p>
+<div *ngFor="let p of result.posts">
+    <h2>{{p.title}}: By: {{ p.author }}</h2>
+    <p [innerHTML]="p.content"></p>
+    <p>{{ p.date | date }}</p>
+    <p>Tags:<span *ngFor="let t of p.tags">{{t}} </span></p>
+</div>

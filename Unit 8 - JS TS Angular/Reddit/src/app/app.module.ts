@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { WeatherComponent } from './weather/weather.component';
-import { BlogComponent } from './blog/blog.component';
+import { RedditListComponent } from './components/reddit-list/reddit-list.component';
+import { RedditSingleComponent } from './components/reddit-single/reddit-single.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherComponent,
-    BlogComponent
+    RedditListComponent,
+    RedditSingleComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
