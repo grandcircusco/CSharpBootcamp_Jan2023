@@ -14,5 +14,5 @@ export class RedditService {
   getReddit(subreddit:string):Observable<RedditModel>{
     return this.http.get<RedditModel>(`${this.url}/${subreddit}/.json`);
   }
-  
+
 }
