@@ -1,0 +1,14 @@
+<div *ngIf="loggedIn">
+  <h1>Counter</h1>
+
+  <p>Hey, {{ user.name }} how many times can you click the button?</p>
+
+  <p aria-live="polite">
+    Current count: <strong>{{ currentCount }}</strong>
+  </p>
+
+  <button class="btn btn-primary" (click)="incrementCounter()">
+    Increment
+  </button>
+</div>
+<h1 *ngIf="!loggedIn">Sign in to see info</h1>

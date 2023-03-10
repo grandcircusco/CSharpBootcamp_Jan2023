@@ -15,7 +15,7 @@ export class DonutDetailsComponent {
 
   ngOnInit(){
     let paramMap = this.route.snapshot.paramMap;
-    let id:number = Number(paramMap.get("id"));
+    let id:number = Number(paramMap.get("unicorn"));
     // console.log(id);
     this.donutService.GetDonutById(id).subscribe((response:DonutModel) => {
       console.log(response);

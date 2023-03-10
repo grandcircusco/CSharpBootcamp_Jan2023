@@ -6,7 +6,7 @@ import { FamousPeopleComponent } from './Components/famous-people/famous-people.
 
 const routes: Routes = [
   { path:"Donuts", component: DonutsComponent },
-  { path:"Donuts/:id", component:DonutDetailsComponent },
+  { path:"Donuts/:unicorn", component:DonutDetailsComponent },
   { path:"Devs", component:FamousPeopleComponent },
   { path:"", redirectTo:"/Donuts", pathMatch:"full" }
 ];
